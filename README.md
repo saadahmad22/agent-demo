@@ -17,13 +17,15 @@ A comprehensive tutorial for creating AI assistants that can handle flight booki
 
 ### 1. Download Project Files
 
-**Option A: Download from GitHub**
+#### Option A: Download from GitHub
+
 1. Go to the GitHub repository
 2. Click the green "Code" button
 3. Select "Download ZIP"
 4. Extract the ZIP file to a folder called "Agentic" on your laptop
 
-**Option B: Download Individual Files**
+#### Option B: Download Individual Files
+
 1. Create a folder called "Agentic" on your laptop
 2. Download these files into the folder:
     - `demo.ipynb` - Main tutorial notebook
@@ -32,6 +34,7 @@ A comprehensive tutorial for creating AI assistants that can handle flight booki
 ### 2. Install Python
 
 If you don't have Python installed:
+
 1. Visit [python.org](https://www.python.org/downloads/)
 2. Download Python 3.8 or later
 3. Run the installer and ensure "Add Python to PATH" is checked
@@ -46,11 +49,13 @@ If you don't have Python installed:
 ### 4. Install Required VS Code Extensions
 
 Install these essential extensions:
+
 1. **Markdown Preview Mermaid Support** - For viewing architecture diagrams
 2. **Python** - For Python development support
 3. **Jupyter** - For running Jupyter notebooks
 
-**Installation steps:**
+#### Installation steps
+
 1. Open VS Code
 2. Click the Extensions icon (square icon in left sidebar) or press `Ctrl+Shift+X`
 3. Search for each extension name and click "Install"
@@ -113,38 +118,31 @@ This project demonstrates building progressively sophisticated AI customer suppo
 
 The primary learning resource containing four progressive tutorials:
 
-**Part 1: Simple Zero-shot Agent**
+#### Part 1: Simple Zero-shot Agent
+
 - Basic assistant with direct tool execution
 - No safety checks or confirmations
 - Demonstrates core LangGraph concepts
 
-**Part 2: Adding User Confirmations** 
+#### Part 2: Adding User Confirmations
+
 - Enhanced safety with user approval required for ALL actions
 - Interrupt-based workflow control
 - Better error handling and context management
-
-**Part 3: Smart Conditional Interrupts**
-- Intelligent decision-making about when to interrupt
-- Safe operations (search) proceed automatically
-- Sensitive operations (booking) require approval
-
-**Part 4: Specialized Workflows** *(Educational framework provided)*
-- Architecture for domain-specific assistant workflows
-- Production deployment patterns
-- Advanced error handling and recovery
 
 ### `llm_integration.py` - LLM Integration Module
 
 A comprehensive wrapper for interacting with language models through Replicate:
 
-#### Key Classes and Functions:
+#### Key Classes and Functions
 
-**`ReplitLLM` Class**
+#### `ReplitLLM` Class
+
 - Main interface for language model interactions
 - Handles authentication and model configuration
 - Manages conversation history and context
 
-**Core Methods:**
+#### Core Methods
 
 1. **`__init__(api_key, model)`**
     - Initializes LLM with API credentials
@@ -185,7 +183,8 @@ A comprehensive wrapper for interacting with language models through Replicate:
 
 ### Supporting Components
 
-**Database Tools (`demo.ipynb` cells)**
+#### Database Tools (`demo.ipynb` cells)
+
 - `setup_database()` - Downloads and configures travel booking database
 - `search_flights()` - Searches available flights
 - `search_hotels()` - Finds hotel accommodations
@@ -195,11 +194,13 @@ A comprehensive wrapper for interacting with language models through Replicate:
 - `lookup_policy()` - Retrieves company policies
 - `fetch_user_flight_information()` - Gets user's current bookings
 
-**Web Search Integration**
+#### Web Search Integration
+
 - `FreeWebSearch` class - Integrates DuckDuckGo search
 - `web_search_tool()` - Provides web search capabilities
 
-**Assistant Classes**
+#### Assistant Classes
+
 - `SimpleAssistant` - Basic tool-calling agent
 - `SafeAssistant` - Enhanced agent with user context and safety
 
@@ -211,7 +212,7 @@ A comprehensive wrapper for interacting with language models through Replicate:
 
 The project uses LangGraph to create stateful, graph-based AI workflows:
 
-```
+```txt
 User Input → Context Loading → AI Processing → Tool Execution → Response
       ↑                                              ↓
       └── User Approval ← Safety Check ← Tool Analysis
@@ -220,6 +221,7 @@ User Input → Context Loading → AI Processing → Tool Execution → Response
 ### State Management
 
 Each conversation maintains:
+
 - **Message History** - Full conversation context
 - **User Information** - Current bookings and preferences  
 - **Tool Results** - Outputs from database and web searches
@@ -245,12 +247,14 @@ Each conversation maintains:
 
 ### Example Interactions
 
-**Safe Searches (No Interruption Needed):**
+#### Safe Searches (No Interruption Needed)
+
 - "What flights are available from Paris to London?"
 - "Show me hotels in Basel"
 - "What are your cancellation policies?"
 
-**Sensitive Operations (Requires Approval):**
+#### Sensitive Operations (Requires Approval)
+
 - "Book hotel ID 123"
 - "Cancel my flight reservation"
 - "Update my booking to a different date"
@@ -258,6 +262,7 @@ Each conversation maintains:
 ### Testing Different Scenarios
 
 The notebook includes comprehensive test functions that demonstrate:
+
 - Basic tool calling
 - Safety interrupts
 - User approval workflows
@@ -271,6 +276,7 @@ The notebook includes comprehensive test functions that demonstrate:
 By completing this tutorial, you'll understand:
 
 ### Technical Skills
+
 - **Graph-based AI Architecture** - Design complex AI workflows
 - **State Management** - Handle conversation context and user data
 - **Tool Integration** - Connect AI with databases and APIs
@@ -278,6 +284,7 @@ By completing this tutorial, you'll understand:
 - **Production Patterns** - Scale AI assistants for real-world use
 
 ### AI Engineering Concepts
+
 - **LangGraph Framework** - Advanced workflow orchestration
 - **Interrupt Patterns** - User control and approval mechanisms
 - **Context Awareness** - Maintaining conversation and user state
@@ -285,6 +292,7 @@ By completing this tutorial, you'll understand:
 - **Tool Calling** - AI function execution and integration
 
 ### Business Applications
+
 - **Customer Service Automation** - 24/7 support capabilities
 - **Booking and Reservation Systems** - Travel and hospitality
 - **Policy and Information Retrieval** - Knowledge base integration
@@ -296,19 +304,23 @@ By completing this tutorial, you'll understand:
 
 ### Common Issues
 
-**API Key Problems:**
+#### API Key Problems
+
 - Ensure your Replicate API key is valid and has billing enabled
 - Check that you've copied the full token including the `r8_` prefix
 
-**Package Installation:**
+#### Package Installation
+
 - Use `pip install --user` if you encounter permission errors
 - Consider using a virtual environment for isolated dependencies
 
-**VS Code Extension Issues:**
+#### VS Code Extension Issues
+
 - Restart VS Code after installing extensions
 - Ensure Python extension can find your Python installation
 
-**Database Issues:**
+#### Database Issues
+
 - Check internet connection for database download
 - Verify the `travel2.sqlite` file is in your project folder
 

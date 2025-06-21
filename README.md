@@ -2,7 +2,7 @@
 
 A comprehensive tutorial for creating AI assistants that can handle flight bookings, hotel reservations, car rentals, and customer service inquiries using LangGraph.
 
-## 📋 Table of Contents
+## <a id="table-of-contents"></a>📋 Table of Contents
 
 - [Setup Instructions](#setup-instructions)
 - [Project Overview](#project-overview)
@@ -13,7 +13,7 @@ A comprehensive tutorial for creating AI assistants that can handle flight booki
 
 ---
 
-## 🚀 Setup Instructions
+## <a id="setup-instructions"></a>🚀 Setup Instructions
 
 ### 1. Download Project Files
 
@@ -26,8 +26,8 @@ A comprehensive tutorial for creating AI assistants that can handle flight booki
 **Option B: Download Individual Files**
 1. Create a folder called "Agentic" on your laptop
 2. Download these files into the folder:
-   - `demo.ipynb` - Main tutorial notebook
-   - `llm_integration.py` - LLM integration module
+    - `demo.ipynb` - Main tutorial notebook
+    - `llm_integration.py` - LLM integration module
 
 ### 2. Install Python
 
@@ -61,19 +61,19 @@ Install these essential extensions:
 This project uses Replicate for AI language model access:
 
 1. **Create Replicate Account**
-   - Visit [replicate.com](https://replicate.com)
-   - Click "Sign Up" and create an account
+    - Visit [replicate.com](https://replicate.com)
+    - Click "Sign Up" and create an account
 
 2. **Add Billing Information**
-   - Go to your account settings
-   - Add a payment method (required for API access)
-   - Note: Usage is typically very affordable for learning purposes
+    - Go to your account settings
+    - Add a payment method (required for API access)
+    - Note: Usage is typically very affordable for learning purposes
 
 3. **Generate API Key**
-   - Navigate to [replicate.com/account/api-tokens](https://replicate.com/account/api-tokens)
-   - Click "Create Token"
-   - Copy your API token (starts with `r8_...`)
-   - **Keep this secure** - treat it like a password
+    - Navigate to [replicate.com/account/api-tokens](https://replicate.com/account/api-tokens)
+    - Click "Create Token"
+    - Copy your API token (starts with `r8_...`)
+    - **Keep this secure** - treat it like a password
 
 ### 6. Run the Project
 
@@ -86,7 +86,7 @@ This project uses Replicate for AI language model access:
 
 ---
 
-## 🎯 Project Overview
+## <a id="project-overview"></a>🎯 Project Overview
 
 This project demonstrates building progressively sophisticated AI customer support assistants using LangGraph. You'll learn to create agents that evolve from simple tool-calling bots to production-ready systems with safety mechanisms and specialized workflows.
 
@@ -107,7 +107,7 @@ This project demonstrates building progressively sophisticated AI customer suppo
 
 ---
 
-## 📁 Code Files Overview
+## <a id="code-files-overview"></a>📁 Code Files Overview
 
 ### `demo.ipynb` - Main Tutorial Notebook
 
@@ -147,41 +147,41 @@ A comprehensive wrapper for interacting with language models through Replicate:
 **Core Methods:**
 
 1. **`__init__(api_key, model)`**
-   - Initializes LLM with API credentials
-   - Sets up default model configuration
-   - Configures environment variables
+    - Initializes LLM with API credentials
+    - Sets up default model configuration
+    - Configures environment variables
 
 2. **`prompt_for_api_key()`**
-   - Interactive API key setup
-   - Validates credentials
-   - Provides user-friendly setup experience
+    - Interactive API key setup
+    - Validates credentials
+    - Provides user-friendly setup experience
 
 3. **`generate_response(prompt, system_prompt, conversation_history, temperature, max_tokens, tools_available)`**
-   - Main response generation method
-   - Handles tool integration and calling
-   - Manages conversation context and history
-   - Returns structured response with content and tool calls
+    - Main response generation method
+    - Handles tool integration and calling
+    - Manages conversation context and history
+    - Returns structured response with content and tool calls
 
 4. **`_init_llm()`**
-   - Internal method to initialize Replicate LLM instance
-   - Handles connection errors gracefully
-   - Sets model parameters
+    - Internal method to initialize Replicate LLM instance
+    - Handles connection errors gracefully
+    - Sets model parameters
 
 5. **`_parse_response_with_tools(raw_response, tools_available)`**
-   - Parses LLM responses to extract tool calls
-   - Separates natural language from function calls
-   - Handles multiple tool call formats
-   - Generates natural language descriptions for tool usage
+    - Parses LLM responses to extract tool calls
+    - Separates natural language from function calls
+    - Handles multiple tool call formats
+    - Generates natural language descriptions for tool usage
 
 6. **`_parse_tool_args(args_str)`**
-   - Extracts and validates tool arguments
-   - Handles type conversion (strings, numbers, booleans)
-   - Supports both quoted and unquoted parameters
+    - Extracts and validates tool arguments
+    - Handles type conversion (strings, numbers, booleans)
+    - Supports both quoted and unquoted parameters
 
 7. **`_generate_tool_description(tool_name, args)`**
-   - Creates human-readable descriptions of tool actions
-   - Provides context-aware explanations
-   - Enhances user experience with clear communication
+    - Creates human-readable descriptions of tool actions
+    - Provides context-aware explanations
+    - Enhances user experience with clear communication
 
 ### Supporting Components
 
@@ -205,7 +205,7 @@ A comprehensive wrapper for interacting with language models through Replicate:
 
 ---
 
-## 🏗️ Architecture
+## <a id="architecture"></a>🏗️ Architecture
 
 ### Graph-Based Workflow
 
@@ -213,8 +213,8 @@ The project uses LangGraph to create stateful, graph-based AI workflows:
 
 ```
 User Input → Context Loading → AI Processing → Tool Execution → Response
-     ↑                                              ↓
-     └── User Approval ← Safety Check ← Tool Analysis
+      ↑                                              ↓
+      └── User Approval ← Safety Check ← Tool Analysis
 ```
 
 ### State Management
@@ -234,7 +234,7 @@ Each conversation maintains:
 
 ---
 
-## 🎮 Usage
+## <a id="usage"></a>🎮 Usage
 
 ### Running the Tutorial
 
@@ -266,7 +266,7 @@ The notebook includes comprehensive test functions that demonstrate:
 
 ---
 
-## 📚 Learning Objectives
+## <a id="learning-objectives"></a>📚 Learning Objectives
 
 By completing this tutorial, you'll understand:
 
